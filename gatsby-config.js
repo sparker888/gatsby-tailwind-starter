@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `gsapTest`,
+    title: `gsapScroll`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [{
     resolve: 'gatsby-plugin-google-analytics',
     options: {
-      "trackingId": ""
+      "trackingId": "UA-55241210-1"
     }
   }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',

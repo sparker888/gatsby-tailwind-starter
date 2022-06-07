@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://www.gravitaldigital.com">
+    <img alt="Gravital" src="./images/gravital.png" width="512" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Gravital Test of Greensock Scroll Trigger and Scroll Smother
 </h1>
 
 ## 🚀 Quick start
@@ -33,7 +33,24 @@
 
     Edit `src/pages/index.js` to see your site update in real-time!
 
+4.  **Add and configure Greensock.**
+
+    You will need a Greensock account set up at Green Sock. Then you will need to add the following into your .npmrc file either for your profile ($ vim ~/.npmrc) or at the root of your project:
+
+    `//npm.greensock.com/:_authToken="your token number goes here"
+    @gsap:registry=https://npm.greensock.com`
+
+    The first time that you install GSAP to a project you need to install via:
+
+    `npm install gsap@npm:@gsap/shockingly`
+
+    After the first time you can install via the normal `npm install gsap` from that point on
+
+    If your membership level changes you need to repeat this step.
+
 4.  **Learn more**
+
+    - [Greensock](https://www.greensock.com)
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
