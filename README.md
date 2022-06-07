@@ -35,7 +35,7 @@
 
 4.  **Add and configure Greensock.**
 
-    You will need a Greensock account set up at Green Sock. Then you will need to add the following into your .npmrc file either for your profile ($ vim ~/.npmrc) or at the root of your project:
+    You will need a Greensock account set up at [Greensock](https://www.greensock.com). Then you will need to add the following into your .npmrc file either for your profile ($ vim ~/.npmrc) or at the root of your project:
 
     `//npm.greensock.com/:_authToken="your token number goes here"
     @gsap:registry=https://npm.greensock.com`
