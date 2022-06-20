@@ -2,9 +2,9 @@ import * as React from "react"
 
 const Gsap1 = () => {
     return (
-        <>
-        "hello"
-        </>
+        <div className="font-sans font-black text-3xl">
+        "Hello, can you hear me now? p"
+        </div>
     )
 }
 
