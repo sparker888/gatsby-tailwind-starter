@@ -5,11 +5,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ["'Futura PT Condensed'", "Arial", "sans-serif"],
-        'serif' : ["Merriweather", "serif"],
-        'display': ["'Myriad Pro'", "Arial", "sans-serif"],
+        'sans': ["'Interstate Condensed'", "Arial", "sans-serif"],
+        'serif' : ["'FF Meta Serif Pro'", "serif"],
         'body': ["'Open Sans'", "sans-serif"],
-        'mono' : ["'Base Mono Wide", "monospace"]
+        'mono' : ["'Base Mono Wide'", "monospace"]
       }
     },
   },
