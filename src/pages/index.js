@@ -96,6 +96,11 @@ const IndexPage = () => {
 				</div>
 			</section>
 
+			{/* Subtitle */}
+			<div className="py-12 text-center font-sans font-black text-5xl tracking-tighter">
+				Color Palette
+			</div>
+
 			{/* Divider */}
 			<div className="relative">
 				<div className="absolute inset-0 flex items-center" aria-hidden="true">
@@ -103,15 +108,18 @@ const IndexPage = () => {
 				</div>
 				<div className="relative flex justify-center">
 					<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
-						FONTS
+						Neutrals
 					</span>
 				</div>
 			</div>
 
 			{/* Color Palette */}
 			<section className="text-center">
-				<div className="max-w-7xl mx-auto sm:px-6 lg:px-8 bg-neutral-500">
-					<p>1. Full-width on mobile, constrained with padded content above.</p>
+				<container className="max-w-7xl mx-auto pt-12 sm:px-6 lg:px-8 bg-neutral-500">
+					<p>
+						1. Full-width on mobile, constrained with padded content above.
+						NOTE: Added pt-12
+					</p>
 					<div className="w-16 shrink-0">
 						<div className="h-10 flex flex-col justify-center">
 							<div className="text-sm font-semibold text-slate-900 dark:text-slate-200">
@@ -231,7 +239,147 @@ const IndexPage = () => {
 							</div>
 						</div>
 					</div>
+				</container>
+			</section>
+			{/* Divider */}
+			<div className="relative">
+				<div className="absolute inset-0 flex items-center" aria-hidden="true">
+					<div className="w-full border-t border-neutral-500" />
 				</div>
+				<div className="relative flex justify-center">
+					<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
+						Neutrals
+					</span>
+				</div>
+			</div>
+
+			{/* Color Palette */}
+			<section className="text-center">
+				<container className="container mx-auto sm:px-6 lg:px-8 pt-12 bg-neutral-500">
+					<p>
+						1. Full-width on mobile, constrained to breakpoint with padded content above.
+						NOTE: Added pt-12
+					</p>
+					<div className="w-16 shrink-0">
+						<div className="h-10 flex flex-col justify-center">
+							<div className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+								Neutral
+							</div>
+						</div>
+					</div>
+					<div className="min-w-0 flex-1 grid grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-50"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									50
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#FAFAFA
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-100"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									100
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#F5F5F5
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-200"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									200
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#E5E5E5
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-300"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									300
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#D4D4D4
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-400"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									400
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#A3A3A3
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-500"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									500
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#737373
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-600"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									600
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#525252
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-700"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									700
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#404040
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-800"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									800
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#262626
+								</div>
+							</div>
+						</div>
+						<div className="space-y-1.5">
+							<div className="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10 bg-neutral-900"></div>
+							<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+								<div className="w-6 font-medium text-slate-900 2xl:w-full dark:text-white">
+									900
+								</div>
+								<div className="text-slate-500 font-mono lowercase dark:text-slate-400">
+									#171717
+								</div>
+							</div>
+						</div>
+					</div>
+				</container>
 			</section>
 		</main>
 	)
