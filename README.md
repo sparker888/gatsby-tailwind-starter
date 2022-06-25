@@ -288,15 +288,52 @@ export default SEO
 Starting with pages/index.js, we'll now use the following boilerplate to start with on each page:
 
 ```
-export default function IndexPage() {
+import * as React from "react"
+import { Link } from "gatsby"
+import Layout from "../components/layout"
+
+const Layout2 = () => {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <div className="grid place-items-center h-screen bg-slate-500">
+        <div class="w-7xl mx-auto">
+          <div className="text-center p-12 border border-slate-900 sm:rounded-md bg-slate-200">
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+              <span className="block font-serif tracking-tight italic pt-2">
+                Ready to dive in?
+              </span>
+              <span className="block font-serif text-2xl tracking-tight italic pt-2 pb-10">
+                Take the blue pill or the red pill?
+              </span>
+            </h2>
+            <div>
+              <div className="inline-flex rounded-md shadow">
+                <Link
+                  to="https://tailwindcss.com/"
+                  target="_blank"
+                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-sans font-medium rounded-md text-slate-50 bg-sky-900 hover:bg-sky-600"
+                >
+                  Tailwindcss.com
+                </Link>
+              </div>
+              <div className="ml-3 inline-flex">
+                <Link
+                  to="https://tailwindui.com/"
+                  target="_blank"
+                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-sans font-medium rounded-md text-slate-50 bg-amber-900 hover:bg-amber-600"
+                >
+                  TailwindUI.com
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
+
+export default Layout2
 ```
 
 ## Other Features Features to Consider:
@@ -361,17 +398,25 @@ f. Use the updated font classes depending on what styles and weights you importe
 
 ```
 <div className="font-sans font-black text-3xl">
-        "Hello, can you hear me now? p"
+    "Hello World"
 </div>
 ```
 
 ### 2. Heroicons
 
+https://heroicons.com/
+
 ### 3. Tailwind aspect  ratio
+
+https://github.com/tailwindlabs/tailwindcss-aspect-ratio
 
 ### 4. Tailwind forms
 
+https://github.com/tailwindlabs/tailwindcss-forms
+
 ### 5. Tailwind typography
+
+https://github.com/tailwindlabs/tailwindcss-typography
 
 
 ## Thanks for your interest! You can follow me on Twitter at [@sparker888](https://www.twitter.com/sparker888).
