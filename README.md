@@ -3,7 +3,10 @@
     <img alt="Gravital" src="https://res.cloudinary.com/gravital-digital/image/upload/v1654201551/gravital-icon-transparent_gjk8o7.png" width="200" />
   </a>
 </p>
+
 # Gatsby Tailwindcss Starter
+
+This is a basic Gatsby site using the [Tailwindcss](https://tailwindcss.com/) starter but modified for our specific uses. Namely, we use it to get up to speed with new clients or new projects. It starts with some basic branding then moves to creating a personality for the site. A number of pages are set up for exploring layouts and styles.
 
 [Tailwind Install Docs] (https://tailwindcss.com/docs/guides/gatsby)
 
