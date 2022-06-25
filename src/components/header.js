@@ -5,9 +5,9 @@ import { Link } from "gatsby"
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
   { name: 'Layout 1', href: '/layout1/' },
-  { name: 'Layout 2', href: '#' },
-  { name: 'Layout 3', href: '#' },
-  { name: 'Layout 4', href: '#' },
+  { name: 'Layout 2', href: '/layout2/' },
+  { name: 'Layout 3', href: '/layout3/' },
+  { name: 'Layout 4', href: '/layout4/' },
 ]
 
 export default function Header() {

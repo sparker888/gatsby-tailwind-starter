@@ -1,71 +1,376 @@
 <p align="center">
-  <a href="https://www.gravitaldigital.com">
-    <img alt="Gravital" src="./images/gravital.png" width="512" />
+  <a href="https://www.gravitaldigital.com/">
+    <img alt="Gravital" src="https://res.cloudinary.com/gravital-digital/image/upload/v1654201551/gravital-icon-transparent_gjk8o7.png" width="200" />
   </a>
 </p>
-<h1 align="center">
-  Gravital Test of Greensock Scroll Trigger and Scroll Smother
-</h1>
+# Gatsby Tailwindcss Starter
 
-## 🚀 Quick start
+[Tailwind Install Docs] (https://tailwindcss.com/docs/guides/gatsby)
 
-1.  **Create a Gatsby site.**
+## 1. Create a project
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+```
+gatsby new my-project
+cd my-project
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## 2. Install Tailwind CSS
 
-2.  **Start developing.**
+Using npm, install tailwindcss and its peer dependencies, as well as gatsby-plugin-postcss, and then run the init command to generate both tailwind.config.js and postcss.config.js.
 
-    Navigate into your new site’s directory and start it up.
+```
+npm install -D tailwindcss postcss autoprefixer gatsby-plugin-postcss
+npx tailwindcss init -p
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
 
-3.  **Open the code and start customizing!**
+## 3. Enable the Gatsby PostCSS plugin
 
-    Your site is now running at http://localhost:8000!
+```
+module.exports = {
+  plugins: [
+    `gatsby-plugin-postcss`,
+    // ...
+  ],
+}
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+NOTE: For a more robust solution, I've been using the following:
 
-4.  **Add and configure Greensock.**
+```
+{
+    resolve: `gatsby-plugin-postcss`,
+    options: {
+      postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
+    }
+  },
+  {
+    resolve: `gatsby-plugin-purgecss`,
+    options: {
+      printRejected: false,
+      develop: false,
+      tailwind: true,
+    },
+  },  
+```
 
-    You will need a Greensock account set up at [Greensock](https://www.greensock.com). Then you will need to add the following into your .npmrc file either for your profile ($ vim ~/.npmrc) or at the root of your project:
+## 4. Configure your template paths
 
-    `//npm.greensock.com/:_authToken="your token number goes here"
-    @gsap:registry=https://npm.greensock.com`
+Add the paths to all of your template files in your tailwind.config.js file.
 
-    The first time that you install GSAP to a project you need to install via:
+```
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
 
-    `npm install gsap@npm:@gsap/shockingly`
+## 5. Disable Gatsby's default styles
 
-    After the first time you can install via the normal `npm install gsap` from that point on
+Either delete the contents of layout.css in the layout.js component or disable the import like so:
 
-    If your membership level changes you need to repeat this step.
+```
+// import "./layout.css"
+```
 
-4.  **Learn more**
+NOTE: we don't need the @tailwindcss/typography plugin for most components to work
 
-    - [Greensock](https://www.greensock.com)
+## 6. Add the Tailwind directives to your CSS
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Create a ./src/styles/global.css file and add the @tailwind directives for each of Tailwind’s layers.
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 7. Import the CSS file
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Create a gatsby-browser.js file at the root of your project if it doesn’t already exist, and import your newly-created ./src/styles/global.css file.
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+import './src/styles/global.css'
+```
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 8. Start the build process
 
-## 🚀 Quick start (Gatsby Cloud)
+```
+gatsby develop
+```
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+## 9. Modify Gatsby Config
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+### a. Add the siteMetadata:
+
+```
+siteMetadata: {
+    links: {
+      facebook: `https://www.facebook.com/gogravital/`,
+      twitter: `https://twitter.com/gogravital/`,
+    },
+    locale: `en`,
+    title: ` | Website Developers`,
+    titleTemplate: `Gravital Digital | Website Design and Development`,
+    description:
+      `Blazing fast websites using Jamstack - Next.js, Gatsby, WordPress, Drupal.`,
+    siteUrl: `https://www.gravitaldigital.com`, // No trailing slash allowed!
+    twitterUsername: `@gogravital`,
+    publicURL: `/rocket-social-card.jpg`, // This will be the default 'social' image for social media shares (in the static folder)
+    organization: `Gravital Digital`,
+    author: `@gogravital`,
+  },
+```
+
+### b. modify starter Gatsby configuration
+
+### c. Add and configure manifest
+
+### d. Add plugins as needed
+
+### e. Add analytics as needed
+
+### f.  Add Typekit as needed
+
+NOTE: See Gravital Branding for boilerplatenpm 
+
+	
+## 10. Configure Layout
+
+This is the current boilerplate that takes care of adding the Title (with useStaticQuery), Header, and Footer:
+
+```
+ import React from "react"
+ import PropTypes from "prop-types"
+ import { useStaticQuery, graphql } from "gatsby"
+ import { MDXProvider } from "@mdx-js/react"
+ import Header from "./header"
+ import Footer from "./footer"
+ 
+ const Layout = ({ children }) => {
+   const data = useStaticQuery(graphql`
+     query SiteTitleQuery {
+       site {
+         siteMetadata {
+           title
+         }
+       }
+     }
+   `)
+ 
+   return (
+     <>
+       <Header siteTitle={data.site.siteMetadata.title} />
+       <div className="container mx-auto bg-gravital-darker-blue sm:px-6 lg:px-8">
+         <main>{children}</main>
+       </div>
+       <Footer />
+     </>
+   )
+ }
+ 
+ Layout.propTypes = {
+   children: PropTypes.node.isRequired,
+ }
+ 
+ export default Layout
+ ```
+ 
+ NOTE: In the future, see about setting up MDX (these packages are in the configuration)
+ 
+ ## 12. Configure SEO component (Helmet)
+ 
+ This is the boilerplate we're currently using that matches up with the site metadata:
+ 
+ ```
+ /**
+ * SEO component that queries for data with
+ *  Gatsby's useStaticQuery React hook
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
+
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
+
+function SEO({ description, lang, meta, title }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  )
+
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
+
+  return (
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `summary`,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata?.author || ``,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ].concat(meta)}
+    />
+  )
+}
+
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+}
+
+SEO.propTypes = {
+  description: PropTypes.string,
+  lang: PropTypes.string,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
+}
+
+export default SEO
+```
+ 
+
+## 11. Page Boilerplate
+
+Starting with pages/index.js, we'll now use the following boilerplate to start with on each page:
+
+```
+export default function IndexPage() {
+  return (
+    <Layout>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+    </Layout>
+  )
+}
+```
+
+## Other Features Features to Consider:
+
+### 1. To install custom fonts from Adobe (Adobe Fonts project)
+
+This was taken from this Gatsby page: https://www.gatsbyjs.com/docs/how-to/styling/using-web-fonts/#self-host-google-fonts-with-fontsource
+
+a. First, install the Gatsby plugin with npm
+
+`npm install --save gatsby-plugin-web-font-loader`
+
+For more info see: https://www.gatsbyjs.com/plugins/gatsby-plugin-web-font-loader/?=font
+
+b. Set up a Web Project in Adobe fonts
+
+https://helpx.adobe.com/fonts/using/add-fonts-website.html
+
+c. Then, create an environment variable to store your Adobe Fonts project ID. (Make sure this file is in your .gitignore file so your ID doesn’t get committed!) For example, if your Adobe Fonts project ID is abcdefg, your .env file will look like this:
+
+`TYPEKIT_ID=abcdefg`
+.env file
+
+d. Now you can add the gatsby-plugin-web-font-loader plugin to your gatsby-config.js file, located in your root directory. In your plugin configuration, pass in the environment variable you created.
+
+```
+require("dotenv").config()
+
+module.exports = {
+  plugins: [
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
+  ],
+}
+```
+
+e. Finally, add it to your Tailwind CSS configuration file (usually tailwind.config.js). How you do this depends on your desired usage.
+
+```
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'sans': ["roboto", "sans-serif"]
+      }
+    }
+  }
+};
+```
+
+This works based on these docs from tailwind: 
+
+https://tailwindcss.com/docs/font-family#customizing-your-theme
+
+f. Use the updated font classes depending on what styles and weights you imported
+
+```
+<div className="font-sans font-black text-3xl">
+        "Hello, can you hear me now? p"
+</div>
+```
+
+### 2. Heroicons
+
+### 3. Tailwind aspect  ratio
+
+### 4. Tailwind forms
+
+### 5. Tailwind typography
+
+
+## Thanks for your interest! You can follow me on Twitter at [@sparker888](https://www.twitter.com/sparker888).
+
+### Fly safe!
