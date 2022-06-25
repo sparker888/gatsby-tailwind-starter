@@ -336,7 +336,7 @@ const Layout2 = () => {
 export default Layout2
 ```
 
-## Other Features Features to Consider:
+## Other Features to Consider:
 
 ### 1. To install custom fonts from Adobe (Adobe Fonts project)
 
