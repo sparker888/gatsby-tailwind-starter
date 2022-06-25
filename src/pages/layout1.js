@@ -1,11 +1,11 @@
 import * as React from "react"
 
-const Gsap1 = () => {
+const Layout1 = () => {
     return (
         <div className="font-sans font-black text-3xl">
-        "Hello, can you hear me now? p"
+        "Hello, can you hear me now?"
         </div>
     )
 }
 
-export default Gsap1
+export default Layout1

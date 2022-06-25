@@ -1,13 +1,25 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import Header from "../components/header"
+import Footer from "../components/footer"
 
 const IndexPage = () => {
 	return (
-		<main className="bg-neutral-300">
+		<main className="bg-slate-300">
 			<title>Home Page</title>
+			<Header className="z-index-10"/>
 			<section className="text-center">
-				<div className="py-12 font-sans font-black text-7xl tracking-tighter">
-					Gravital Digital Branding
+				<div>
+					<img
+						className="mx-auto pt-12 max-h-60"
+						src="https://res.cloudinary.com/gravital-digital/image/upload/v1654201551/gravital-icon-transparent_gjk8o7.png"
+						alt="Gravital Digital Logo"
+					/>
+				</div>
+				<div className="pt-6 pb-12 font-sans font-black text-7xl tracking-tighter">
+					<span className="text-blue-500">Gravital</span>{" "}
+					<span className="text-orange-500">Digital</span>{" "}
+					<span className="text-blue-500">Branding</span>
 				</div>
 
 				{/* Divider */}
@@ -16,91 +28,103 @@ const IndexPage = () => {
 						className="absolute inset-0 flex items-center"
 						aria-hidden="true"
 					>
-						<div className="w-full border-t border-neutral-500" />
+						<div className="w-full border-t border-slate-500" />
 					</div>
 					<div className="relative flex justify-center">
-						<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
+						<span className="py-3 px-3 bg-white text-lg font-medium text-slate-900">
 							FONTS
 						</span>
 					</div>
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
-					<div className="px-4 py-5 sm:px-6">
-						<h1 className="font-sans font-medium text-4xl">
-							Sans: Interstate medium 4xl h1
-						</h1>
+					<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
+						<div className="px-4 py-5 sm:px-6">
+							<h1 className="font-sans font-medium text-4xl">
+								<span className="font-bold underline underline-offset-4">
+									Sans
+								</span>
+								: Interstate medium 4xl h1
+							</h1>
+						</div>
+						<div className="px-4 py-5 sm:p-6">
+							<div className="font-sans font-medium text-base">
+								font-sans font-medium (500) text-base
+							</div>
+							<div className="font-sans font-bold text-2xl">
+								font-sans font-bold (700) text-2xl
+							</div>
+							<div className="font-sans font-black text-5xl tracking-tight">
+								font-sans font-black (900) text-5xl tracking-tight
+							</div>
+						</div>
 					</div>
-					<div className="px-4 py-5 sm:p-6">
-						<div className="font-sans font-medium text-base">
-							font-sans font-medium (500) text-base
-						</div>
-						<div className="font-sans font-bold text-2xl">
-							font-sans font-bold (700) text-2xl
-						</div>
-						<div className="font-sans font-black text-5xl tracking-tight">
-							font-sans font-black (900) text-5xl tracking-tight
-						</div>
-					</div>
-				</div>
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
-					<div className="px-4 py-5 sm:px-6">
-						<h1 className="font-serif font-bold text-4xl">
-							Serif: FF Meta Serif Pro bold 4xl h1
-						</h1>
+					<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
+						<div className="px-4 py-5 sm:px-6">
+							<h1 className="font-serif font-bold text-4xl">
+								<span className="font-bold underline underline-offset-4">
+									Serif
+								</span>
+								: FF Meta Serif Pro bold 4xl h1
+							</h1>
+						</div>
+						<div className="px-4 py-5 sm:p-6">
+							<div className="font-serif font-book text-base">
+								font-serif font-book (500) text-base
+							</div>
+							<div className="font-serif font-book text-base italic">
+								font-serif font-book (500) text-2xl italic
+							</div>
+							<div className="font-serif font-bold text-5xl tracking-tight italic">
+								font-serif font-bold (700) text-5xl tracking-tight italic
+							</div>
+						</div>
 					</div>
-					<div className="px-4 py-5 sm:p-6">
-						<div className="font-serif font-book text-base">
-							font-serif font-book (500) text-base
-						</div>
-						<div className="font-serif font-book text-base italic">
-							font-serif font-book (500) text-2xl italic
-						</div>
-						<div className="font-serif font-bold text-5xl tracking-tight italic">
-							font-serif font-bold (700) text-5xl tracking-tight italic
-						</div>
-					</div>
-				</div>
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
-					<div className="px-4 py-5 sm:px-6">
-						<h1 className="font-Container font-bold text-4xl">
-							Body: Open Sans bold (700) 4xl h1
-						</h1>
+					<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
+						<div className="px-4 py-5 sm:px-6">
+							<h1 className="font-Container font-bold text-4xl">
+								<span className="font-bold underline underline-offset-4">
+									Body
+								</span>
+								: Open Sans bold (700) 4xl h1
+							</h1>
+						</div>
+						<div className="px-4 py-5 sm:p-6">
+							<div className="font-body font-normal text-base">
+								font-body font-normal (400) text-base
+							</div>
+							<div className="font-body font-normal text-base italic">
+								font-body font-normal (400) text-2xl italic
+							</div>
+							<div className="font-body font-bold text-5xl tracking-tight italic">
+								font-body font-bold (700) text-5xl tracking-tight italic
+							</div>
+						</div>
 					</div>
-					<div className="px-4 py-5 sm:p-6">
-						<div className="font-body font-normal text-base">
-							font-body font-normal (400) text-base
-						</div>
-						<div className="font-body font-normal text-base italic">
-							font-body font-normal (400) text-2xl italic
-						</div>
-						<div className="font-body font-bold text-5xl tracking-tight italic">
-							font-body font-bold (700) text-5xl tracking-tight italic
-						</div>
-					</div>
-				</div>
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
-					<div className="px-4 py-5 sm:px-6">
-						<h1 className="font-mono font-regular text-4xl">
-							Mono: Regular (400) 4xl h1
-						</h1>
-					</div>
-					<div className="px-4 py-5 sm:p-6">
-						<div className="font-mono font-regular text-base tracking-tight">
-							font-mono font-regular (400) text-base tracking-tight
+					<div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
+						<div className="px-4 py-5 sm:px-6">
+							<h1 className="font-mono font-regular text-4xl">
+								<span className="font-bold underline underline-offset-4">
+									Mono
+								</span>
+								: Regular (400) 4xl h1
+							</h1>
+						</div>
+						<div className="px-4 py-5 sm:p-6">
+							<div className="font-mono font-regular text-base tracking-tight">
+								font-mono font-regular (400) text-base tracking-tight
+							</div>
 						</div>
 					</div>
-				</div>
 				</div>
 			</section>
 
@@ -112,29 +136,33 @@ const IndexPage = () => {
 			{/* Divider */}
 			<div className="relative">
 				<div className="absolute inset-0 flex items-center" aria-hidden="true">
-					<div className="w-full border-t border-neutral-500" />
+					<div className="w-full border-t border-slate-500" />
 				</div>
 				<div className="relative flex justify-center">
-					<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
+					<span className="py-3 px-3 bg-white text-lg font-medium text-slate-900">
 						Neutrals
 					</span>
 				</div>
 			</div>
 
-			{/* Color Palette - Neutrals */}
+			{/* Color Palette - Slate */}
 			<div className="bg-white max-w-7xl mx-auto py-12 sm:px-6 lg:px-8">
-				<p>
-					1. Full-width on mobile, constrained with padded content above.
-					"max-w-7xl mx-auto sm:px-6 lg:px-8" NOTE: Added py-12
+				<p className="text-center mx-24 font-serif text-2xl">
+					These are the colors you will use the most and will make up the
+					majority of your UI. Use them for most of your text, backgrounds, and
+					borders, as well as for things like secondary buttons and links.
 				</p>
-				<div className="w-16 shrink-0">
+
+				<div className="shrink-0">
 					<div className="h-10 flex flex-col justify-center">
-						<div className="text-sm font-semibold text-slate-900 ">Neutral</div>
+						<div className="text-xl font-semibold text-slate-900">
+							Slate-[number]
+						</div>
 					</div>
 				</div>
 				<div className="min-w-0 flex-1 grid grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-50"></div>
+						<div className="h-10 w-full rounded bg-slate-50"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								50
@@ -143,7 +171,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-100"></div>
+						<div className="h-10 w-full rounded bg-slate-100"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								100
@@ -152,7 +180,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-200"></div>
+						<div className="h-10 w-full rounded bg-slate-200"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								200
@@ -161,7 +189,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-300"></div>
+						<div className="h-10 w-full rounded bg-slate-300"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								300
@@ -170,7 +198,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-400"></div>
+						<div className="h-10 w-full rounded bg-slate-400"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								400
@@ -179,7 +207,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-500"></div>
+						<div className="h-10 w-full rounded bg-slate-500"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								500
@@ -188,7 +216,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-600"></div>
+						<div className="h-10 w-full rounded bg-slate-600"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								600
@@ -197,7 +225,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-700"></div>
+						<div className="h-10 w-full rounded bg-slate-700"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								700
@@ -206,7 +234,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-800"></div>
+						<div className="h-10 w-full rounded bg-slate-800"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								800
@@ -215,7 +243,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-neutral-900"></div>
+						<div className="h-10 w-full rounded bg-slate-900"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								900
@@ -224,37 +252,46 @@ const IndexPage = () => {
 						</div>
 					</div>
 				</div>
+				<p className="text-center mt-12 mx-48 font-mono text-xl">
+					<span className="font-bold underline underline-offset-4">
+						Section Container 1.
+					</span>{" "}
+					Full-width on mobile, constrained with padded content above.
+					"max-w-7xl mx-auto sm:px-6 lg:px-8" NOTE: Added py-12'
+				</p>
 			</div>
 
-			{/* Divider - Primary Yellows*/}
+			{/* Divider - Primary Amber*/}
 			<div className="relative">
 				<div className="absolute inset-0 flex items-center" aria-hidden="true">
-					<div className="w-full border-t border-neutral-500" />
+					<div className="w-full border-t border-slate-500" />
 				</div>
 				<div className="relative flex justify-center">
-					<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
-						Yellows
+					<span className="py-3 px-3 bg-white text-lg font-medium text-slate-900">
+						Amber Primary
 					</span>
 				</div>
 			</div>
 
-			{/* Color Palette - Primary Yellows */}
+			{/* Color Palette - Primary Amber */}
 			<div className="bg-white max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-				<p>
-					2. Full-width on mobile, constrained to breakpoint with padded content
-					above. This keeps everything to the same width at each breakpoint vs.
-					smoothly increasing and decreasing the size of elements enclosed by
-					the container. "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" NOTE: Added
-					pt-12
+				<p className="text-center mx-24 font-serif text-2xl">
+					These are the splashes of color that should appear the most in your
+					UI, and are the ones that determine the overall "look" of the site.
+					Use these for things like primary actions, links, navigation items,
+					icons, accent borders, or text you want to emphasize.
 				</p>
-				<div className="w-16 shrink-0">
+
+				<div className="shrink-0">
 					<div className="h-10 flex flex-col justify-center">
-						<div className="text-sm font-semibold text-slate-900">Yellow</div>
+						<div className="text-xl font-semibold text-slate-900">
+							Amber-[number]
+						</div>
 					</div>
 				</div>
 				<div className="min-w-0 flex-1 grid grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-50"></div>
+						<div className="h-10 w-full rounded bg-amber-50"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								50
@@ -263,7 +300,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-100"></div>
+						<div className="h-10 w-full rounded bg-amber-100"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								100
@@ -272,7 +309,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-200"></div>
+						<div className="h-10 w-full rounded bg-amber-200"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								200
@@ -281,7 +318,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-300"></div>
+						<div className="h-10 w-full rounded bg-amber-300"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								300
@@ -290,7 +327,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-400"></div>
+						<div className="h-10 w-full rounded bg-amber-400"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								400
@@ -299,7 +336,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-500"></div>
+						<div className="h-10 w-full rounded bg-amber-500"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full text-white">
 								500
@@ -308,7 +345,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-600"></div>
+						<div className="h-10 w-full rounded bg-amber-600"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								600
@@ -317,7 +354,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-700"></div>
+						<div className="h-10 w-full rounded bg-amber-700"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								700
@@ -326,7 +363,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-800"></div>
+						<div className="h-10 w-full rounded bg-amber-800"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								800
@@ -335,7 +372,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-yellow-900"></div>
+						<div className="h-10 w-full rounded bg-amber-900"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								900
@@ -344,29 +381,41 @@ const IndexPage = () => {
 						</div>
 					</div>
 				</div>
+				<p className="text-center mt-12 mx-48 font-mono text-xl">
+					<span className="font-bold underline underline-offset-4">
+						Section Container 2.
+					</span>{" "}
+					Constrained with padded content. "max-w-7xl mx-auto px-4 sm:px-6
+					lg:px-8" NOTE: Added py-12.
+				</p>
 			</div>
 
 			{/* Divider - Primary Sky Blues*/}
 			<div className="relative">
 				<div className="absolute inset-0 flex items-center" aria-hidden="true">
-					<div className="w-full border-t border-neutral-500" />
+					<div className="w-full border-t border-slate-500" />
 				</div>
 				<div className="relative flex justify-center">
-					<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
-						Blues
+					<span className="py-3 px-3 bg-white text-lg font-medium text-slate-900">
+						Blue Primary
 					</span>
 				</div>
 			</div>
 
 			{/* Color Palette - Primary Sky Blues */}
 			<div className="bg-white container mx-auto py-12 sm:px-6 lg:px-8">
-				<p>
-					3. Full-width on mobile, constrained to breakpoint with padded content
-					above mobile. "container mx-auto sm:px-6 lg:px-8" NOTE: Added py-12
+				<p className="text-center mx-24 font-serif text-2xl">
+					These are the splashes of color that should appear the most in your
+					UI, and are the ones that determine the overall "look" of the site.
+					Use these for things like primary actions, links, navigation items,
+					icons, accent borders, or text you want to emphasize.
 				</p>
+
 				<div className="w-16 shrink-0">
 					<div className="h-10 flex flex-col justify-center">
-						<div className="text-sm font-semibold text-slate-900">Yellow</div>
+						<div className="text-xl font-semibold text-slate-900">
+							Sky-[number]
+						</div>
 					</div>
 				</div>
 				<div className="min-w-0 flex-1 grid grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
@@ -461,28 +510,43 @@ const IndexPage = () => {
 						</div>
 					</div>
 				</div>
+				<p className="text-center mt-12 mx-48 font-mono text-xl">
+					<span className="font-bold underline underline-offset-4">
+						Section Container 3.
+					</span>{" "}
+					Full-width on mobile, constrained to breakpoint with padded content
+					above mobile. This keeps everything to the same width at each
+					breakpoint vs. smoothly increasing and decreasing the size of elements
+					enclosed by the container. "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+					NOTE: Added pt-12.
+				</p>
 			</div>
 
-			{/* Divider - Supporting Reds*/}
+			{/* Divider - Supporting Reds */}
 			<div className="relative">
 				<div className="absolute inset-0 flex items-center" aria-hidden="true">
-					<div className="w-full border-t border-neutral-500" />
+					<div className="w-full border-t border-slate-500" />
 				</div>
 				<div className="relative flex justify-center">
-					<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
-						Reds
+					<span className="py-3 px-3 bg-white text-lg font-medium text-slate-900">
+						Supporting Reds
 					</span>
 				</div>
 			</div>
 
 			{/* Color Palette - Supporting Reds */}
 			<div className="bg-white container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-				<p>
-					4. Constrained to breakpoint with padded content. See notes above. Just adds padding to mobile. "container mx-auto px-4 sm:px-6 lg:px-8" NOTE: Added py-12
+				<p className="text-center mx-24 font-serif text-2xl">
+					These colors should be used fairly conservatively throughout your UI
+					to avoid overpowering your primary colors. Use them when you need an
+					element to stand out, or to reinforce things like error states or
+					positive trends with the appropriate semantic color.
 				</p>
-				<div className="w-16 shrink-0">
+				<div className="shrink-0">
 					<div className="h-10 flex flex-col justify-center">
-						<div className="text-sm font-semibold text-slate-900">Reds</div>
+						<div className="text-xl font-semibold text-slate-900">
+							Red-[number]
+						</div>
 					</div>
 				</div>
 				<div className="min-w-0 flex-1 grid grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
@@ -577,33 +641,47 @@ const IndexPage = () => {
 						</div>
 					</div>
 				</div>
+				<p className="text-center mt-12 mx-48 font-mono text-xl">
+					<span className="font-bold underline underline-offset-4">
+						Section Container 4.
+					</span>{" "}
+					Constrained to breakpoint with padded content. See notes above. Just
+					adds padding to mobile. "container mx-auto px-4 sm:px-6 lg:px-8" NOTE:
+					Added py-12
+				</p>
 			</div>
 
-			{/* Divider - Supporting Teals*/}
+			{/* Divider - Supporting Purples*/}
 			<div className="relative">
 				<div className="absolute inset-0 flex items-center" aria-hidden="true">
-					<div className="w-full border-t border-neutral-500" />
+					<div className="w-full border-t border-slate-500" />
 				</div>
 				<div className="relative flex justify-center">
-					<span className="py-3 px-3 bg-white text-lg font-medium text-neutral-900">
-						Teals
+					<span className="py-3 px-3 bg-white text-lg font-medium text-slate-900">
+						Supporting Purples
 					</span>
 				</div>
 			</div>
 
-			{/* Color Palette - Supporting Teals */}
+			{/* Color Palette - Supporting Purples */}
 			<div className="bg-white max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-				<p>
-					5. Narrow constrained with padded content. Not a container, so goes down to mobile smoothly from what looks like iPad size "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" NOTE: Added py-12
+				<p className="text-center mx-24 font-serif text-2xl">
+					These colors should be used fairly conservatively throughout your UI
+					to avoid overpowering your primary colors. Use them when you need an
+					element to stand out, or to reinforce things like error states or
+					positive trends with the appropriate semantic color.
 				</p>
-				<div className="w-16 shrink-0">
+
+				<div className="shrink-0">
 					<div className="h-10 flex flex-col justify-center">
-						<div className="text-sm font-semibold text-slate-900">Teals</div>
+						<div className="text-xl font-semibold text-slate-900">
+							Purple-[number]
+						</div>
 					</div>
 				</div>
 				<div className="min-w-0 flex-1 grid grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-50"></div>
+						<div className="h-10 w-full rounded bg-purple-50"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								50
@@ -612,7 +690,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-100"></div>
+						<div className="h-10 w-full rounded bg-purple-100"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								100
@@ -621,7 +699,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-200"></div>
+						<div className="h-10 w-full rounded bg-purple-200"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								200
@@ -630,7 +708,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-300"></div>
+						<div className="h-10 w-full rounded bg-purple-300"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								300
@@ -639,7 +717,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-400"></div>
+						<div className="h-10 w-full rounded bg-purple-400"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								400
@@ -648,7 +726,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-500"></div>
+						<div className="h-10 w-full rounded bg-purple-500"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full text-white">
 								500
@@ -657,7 +735,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-600"></div>
+						<div className="h-10 w-full rounded bg-purple-600"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								600
@@ -666,7 +744,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-700"></div>
+						<div className="h-10 w-full rounded bg-purple-700"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								700
@@ -675,7 +753,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-800"></div>
+						<div className="h-10 w-full rounded bg-purple-800"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								800
@@ -684,7 +762,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 					<div className="space-y-1.5">
-						<div className="h-10 w-full rounded bg-teal-900"></div>
+						<div className="h-10 w-full rounded bg-purple-900"></div>
 						<div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
 							<div className="w-6 font-medium text-slate-900 2xl:w-full ">
 								900
@@ -693,8 +771,16 @@ const IndexPage = () => {
 						</div>
 					</div>
 				</div>
+				<p className="text-center mt-12 mx-48 font-mono text-xl">
+					<span className="font-bold underline underline-offset-4">
+						Section Container 5.
+					</span>{" "}
+					Narrow constrained with padded content. Not a container, so goes down
+					to mobile smoothly from what looks like iPad size "max-w-7xl mx-auto
+					px-4 sm:px-6 lg:px-8" NOTE: Added py-12
+				</p>
 			</div>
-
+			<Footer />
 		</main>
 	)
 }
