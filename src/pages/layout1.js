@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 
-const Layout2 = () => {
+const Layout1 = () => {
   return (
     <Layout>
       <div className="grid place-items-center h-screen bg-slate-500">
@@ -23,7 +23,7 @@ const Layout2 = () => {
                   target="_blank"
                   className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-sans font-medium rounded-md text-slate-50 bg-sky-900 hover:bg-sky-600"
                 >
-                  Tailwindcss.com
+                  Tailwind CSS
                 </Link>
               </div>
               <div className="ml-3 inline-flex">
@@ -32,7 +32,7 @@ const Layout2 = () => {
                   target="_blank"
                   className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-sans font-medium rounded-md text-slate-50 bg-amber-900 hover:bg-amber-600"
                 >
-                  TailwindUI.com
+                  Tailwind UI
                 </Link>
               </div>
             </div>
@@ -43,4 +43,4 @@ const Layout2 = () => {
   )
 }
 
-export default Layout2
+export default Layout1
