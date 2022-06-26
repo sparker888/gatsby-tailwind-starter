@@ -8,7 +8,7 @@
 
 This is a basic Gatsby site using the [Tailwindcss](https://tailwindcss.com/) starter but modified for our specific uses. Namely, we use it to get up to speed with new clients or new projects. It starts with some basic branding then moves to creating a personality for the site. A number of pages are set up for exploring layouts and styles.
 
-After the standard Gatsby project setup, we essentially followed the [Tailwind Install Docs](https://tailwindcss.com/docs/guides/gatsby) as you will see in the steps below. Starting at Step 10, we began customizing the project. This is a step-by-step account of what was done to arrive at what you see in the repo.
+After the standard Gatsby project setup, we essentially followed the [Tailwind Install Docs](https://tailwindcss.com/docs/guides/gatsby) as you will see in the steps below. Starting at Step 9, we began customizing the project. This is a step-by-step account of what was done to arrive at what you see in the repo.
 
 ## 1. Create a project
 
