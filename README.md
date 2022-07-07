@@ -338,63 +338,51 @@ export default Layout2
 
 ## Other Features to Consider:
 
-### 1. To install custom fonts from Adobe (Adobe Fonts project)
+### 1. To install custom fonts from Adobe (Adobe Typekit)
 
-This was taken from this Gatsby page: https://www.gatsbyjs.com/docs/how-to/styling/using-web-fonts/#self-host-google-fonts-with-fontsource
-
-a. First, install the Gatsby plugin with npm
-
-`npm install --save gatsby-plugin-web-font-loader`
-
-For more info see: https://www.gatsbyjs.com/plugins/gatsby-plugin-web-font-loader/?=font
-
-b. Set up a Web Project in Adobe fonts
+a. Set up a Web Project in Adobe fonts
 
 https://helpx.adobe.com/fonts/using/add-fonts-website.html
 
-c. Then, create an environment variable to store your Adobe Fonts project ID. (Make sure this file is in your .gitignore file so your ID doesn’t get committed!) For example, if your Adobe Fonts project ID is abcdefg, your .env file will look like this:
-
-`TYPEKIT_ID=abcdefg`
-.env file
-
-d. Now you can add the gatsby-plugin-web-font-loader plugin to your gatsby-config.js file, located in your root directory. In your plugin configuration, pass in the environment variable you created.
+b. Modify your global.css file as set up in Tailwind above using the @import code that Adobe gives you
 
 ```
-require("dotenv").config()
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url("https://use.typekit.net/zxh8jgs.css");
+```
+
+I removed this in favor of adding the URL provided by Adobe as seen in this article: https://www.itzami.com/blog/how-to-add-a-google-font-to-your-gatsby-tailwind-project
+
+c. Modify the tailwind.config.js file to import the font families you specified as seen here:
+
+```
 module.exports = {
-  plugins: [
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        typekit: {
-          id: process.env.TYPEKIT_ID,
-        },
-      },
-    },
+  content: [
+    "./src/pages/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
-}
-```
-
-e. Finally, add it to your Tailwind CSS configuration file (usually tailwind.config.js). How you do this depends on your desired usage.
-
-```
-module.exports = {
   theme: {
-    extend: {
-      fontFamily: {
-        'sans': ["roboto", "sans-serif"]
-      }
-    }
-  }
-};
+    fontFamily: {
+      sans: ["interstate-condensed", "sans-serif"],
+      serif: ["ff-meta-serif-web-pro", "serif"],
+      body: ["open-sans", "sans-serif"],
+      mono: ["base-mono-wide", "monospace"],
+    },
+    extend: {},
+  },
+  plugins: [],
+}
+
 ```
 
 This works based on these docs from tailwind: 
 
 https://tailwindcss.com/docs/font-family#customizing-your-theme
 
-f. Use the updated font classes depending on what styles and weights you imported
+f. Use the updated font classes depending on what styles and weights you imported. For example, when using the sans font, do this:
 
 ```
 <div className="font-sans font-black text-3xl">
