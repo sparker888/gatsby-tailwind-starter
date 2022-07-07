@@ -42,9 +42,9 @@ const IndexPage = () => {
             <div className="px-4 py-5 sm:px-6">
               <h1 className="font-sans font-medium text-4xl">
                 <span className="font-bold underline underline-offset-4">
-                  Sans
+                  sans
                 </span>
-                : Interstate medium 4xl h1
+                : sans medium 4xl h1
               </h1>
             </div>
             <div className="px-4 py-5 sm:p-6">
@@ -88,7 +88,7 @@ const IndexPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 pb-6 bg-white overflow-hidden shadow rounded-lg divide-y divide-neutral-200">
             <div className="px-4 py-5 sm:px-6">
-              <h1 className="font-Container font-bold text-4xl">
+              <h1 className="font-Container font-body text-4xl">
                 <span className="font-bold underline underline-offset-4">
                   Body
                 </span>

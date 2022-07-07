@@ -1,16 +1,16 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/pages/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        'sans': ["'Interstate Condensed'", "Arial", "sans-serif"],
-        'serif' : ["'FF Meta Serif Pro'", "serif"],
-        'body': ["'Open Sans'", "sans-serif"],
-        'mono' : ["'Base Mono Wide'", "monospace"]
-      }
+    fontFamily: {
+      sans: ["interstate-condensed", "sans-serif"],
+      serif: ["ff-meta-serif-web-pro", "serif"],
+      body: ["open-sans", "sans-serif"],
+      mono: ["base-mono-wide", "monospace"],
     },
+    extend: {},
   },
   plugins: [],
 }
