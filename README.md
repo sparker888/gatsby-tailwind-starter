@@ -351,7 +351,7 @@ b. Modify your global.css file as set up in Tailwind above using the @import cod
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://use.typekit.net/zxh8jgs.css");
+@import url("https://use.typekit.net/{your-id}.css");
 ```
 
 I removed this in favor of adding the URL provided by Adobe as seen in this article: https://www.itzami.com/blog/how-to-add-a-google-font-to-your-gatsby-tailwind-project
