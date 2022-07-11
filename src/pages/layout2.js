@@ -1,46 +1,31 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import ScrollButton from "../components/scrollup"
+import Full1 from "../components/full-1left-2right"
+import Full2 from "../components/full-2left-1right"
+import Grid1 from "../components/grid-1left-2right"
+import Grid2 from "../components/grid-2left-1right"
+import Grid2Equal from "../components/grid-2equal"
+import Benefits from "../components/benefits"
+import Cta from "../components/cta"
+import Contact from "../components/contact"
 
-const Layout2 = () => {
+const Home = () => {
   return (
     <Layout>
-      <div className="grid place-items-center h-screen bg-slate-500">
-        <div class="w-7xl mx-auto">
-          <div className="text-center p-12 border border-slate-900 sm:rounded-md bg-slate-200">
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-              <span className="block font-serif tracking-tight italic pt-2">
-                Ready to dive in?
-              </span>
-              <span className="block font-serif text-2xl tracking-tight italic pt-2 pb-10">
-                Take the blue pill or the red pill?
-              </span>
-            </h2>
-            <div>
-              <div className="inline-flex rounded-md shadow">
-                <Link
-                  to="https://tailwindcss.com/"
-                  target="_blank"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-sans font-medium rounded-md text-slate-50 bg-sky-900 hover:bg-sky-600"
-                >
-                  Tailwind CSS
-                </Link>
-              </div>
-              <div className="ml-3 inline-flex">
-                <Link
-                  to="https://tailwindui.com/"
-                  target="_blank"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-sans font-medium rounded-md text-slate-50 bg-amber-900 hover:bg-amber-600"
-                >
-                  Tailwind UI
-                </Link>
-              </div>
-            </div>
-          </div>
+      <>
+        <div className="bg-black">
+          <ScrollButton />
+          <Full1 />
+          <Full2 />
+          <Grid1 />
+          <Grid2 />
+          <Grid2Equal />
         </div>
-      </div>
+      </>
     </Layout>
   )
 }
 
-export default Layout2
+export default Home
