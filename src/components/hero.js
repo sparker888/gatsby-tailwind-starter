@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 
 {
   /* Based on https://tailwindui.com/components/marketing/sections/heroes the 7th component from the top. */
@@ -18,7 +17,7 @@ export default function Hero3() {
         </div>
         <div className="relative px-4 pt-40 sm:px-6 sm:pt-36 lg:px-8 lg:pt-48">
           <h1 className="pt-6 text-center sm:pt-16 md:pt-28 lg:pt-36 xl:pt-48 2xl:pt-60">
-            <span className="block bg-gradient-to-br from-purple-700 to-red-700 bg-clip-text pb-2 text-5xl font-black text-transparent sm:pb-4 sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl 2xl:text-9xl">
+            <span className="bg-gradient-to-br from-purple-700 to-red-700 bg-clip-text pb-2 text-5xl font-black text-transparent sm:pb-4 sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl 2xl:text-9xl">
               Blazing Fast!
             </span>
           </h1>

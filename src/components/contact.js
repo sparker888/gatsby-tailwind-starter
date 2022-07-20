@@ -1,10 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline"
 
-
 export default function Contact() {
-
   return (
     <div className="bg-black">
       <div className="container mx-auto rounded-3xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
@@ -64,9 +61,7 @@ export default function Contact() {
             </div>
 
             {/* Contact form */}
-            <div
-              className="relative lg:col-span-2 overflow-hidden rounded-r-3xl bg-gradient-to-t from-amber-900 to-amber-600 bg-cover py-10 px-6 sm:px-10 xl:p-12"
-            >
+            <div className="relative lg:col-span-2 overflow-hidden rounded-r-3xl bg-gradient-to-t from-amber-900 to-amber-600 bg-cover py-10 px-6 sm:px-10 xl:p-12">
               <form
                 name="contact"
                 form
@@ -155,8 +150,7 @@ export default function Contact() {
                       id="phone"
                       autoComplete="tel"
                       className="block w-full rounded-md border-slate-400 py-3 px-4 text-slate-900 shadow-sm focus:border-amber-400 focus:ring-amber-400"
-                      aria-described
-                      by="phone-optional"
+                      aria-describedby="phone-optional"
                     />
                   </div>
                 </div>
@@ -197,8 +191,7 @@ export default function Contact() {
                       name="message"
                       rows={4}
                       className="block w-full rounded-md border border-slate-400 py-3 px-4 text-slate-900 shadow-sm focus:border-amber-400 focus:ring-amber-400"
-                      aria-described
-                      by="message-max"
+                      aria-describedby="message-max"
                       defaultValue={""}
                     />
                   </div>

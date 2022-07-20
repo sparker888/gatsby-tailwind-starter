@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { ArrowCircleUpIcon } from "@heroicons/react/solid"
 import ScrollUp from "react-scrollup-lite"
 
