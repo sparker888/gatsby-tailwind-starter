@@ -27,7 +27,7 @@ npx tailwindcss init -p
 ```
 
 
-## 3. Enable the Gatsby PostCSS plugin
+## 3. Enable the Gatsby PostCSS plugin in gatsby-config.js
 
 ```
 module.exports = {
